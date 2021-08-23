@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <main>
+        <div id="roundselection">
+            <h3>In how many rounds can you guess the number?</h3>
+            <form action="" onsubmit="return false">
+                <input type="radio" id="fourrounds" name="rounds" value="4" onclick="getRounds()">
+                <label for="fourrounds">4</label><br>
+                <input type="radio" id="fiverounds" name="rounds" value="5" onclick="getRounds()">
+                <label for="fiverounds">5</label><br>
+                <input type="radio" id="sixrounds" name="rounds" value="6" onclick="getRounds()">
+                <label for="sixrounds">6</label><br>
+                <input type="radio" id="customrounds" name="rounds" value="custom" onclick="getRounds()">
+                <label for="customrounds">custom</label><br>
+                <input type="number" id="customroundsnumber" name="rounds" onchange="getRounds()">
+            </form>
+        </div>
+
+        <div id="guesses">
+            <input type="number" id="guess" name="guess"><br><br>
+            <input type="submit" value="Guess" onclick="rechnen()">
+        </div>
+
+        <div id="output">
+
+        </div>
+
+    </main>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

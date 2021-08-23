@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #1F2027;
+    color: whitesmoke;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+#roundselection {
+    border: 1px solid whitesmoke;
+    width: 500px;
+    margin: 10vh auto 2.5vh;
+    padding: 20px;
+}
+
+input[type="number"] {
+    background-color: white;
+    height: 2em;
+    color: black;
+}
+
+#guesses {
+    border: 1px solid whitesmoke;
+    width: 500px;
+    margin: 2.5vh auto 10vh;
+    padding: 20px;
+}
