@@ -11,8 +11,11 @@ main {
     text-align: center;
 }
 
+#customroundsnumber, #showrounds {
+    display: none;
+}
 
-#roundselection {
+#rounds {
     border: 1px solid whitesmoke;
     width: 500px;
     margin: 10vh auto 2.5vh;

@@ -9,18 +9,21 @@
 </head>
 <body>
     <main>
-        <div id="roundselection">
+        <div id="rounds">
             <h3>In how many rounds can you guess the number?</h3>
             <form action="" onsubmit="return false">
-                <input type="radio" id="fourrounds" name="rounds" value="4" onclick="getRounds()">
-                <label for="fourrounds">4</label><br>
-                <input type="radio" id="fiverounds" name="rounds" value="5" onclick="getRounds()">
-                <label for="fiverounds">5</label><br>
-                <input type="radio" id="sixrounds" name="rounds" value="6" onclick="getRounds()">
-                <label for="sixrounds">6</label><br>
-                <input type="radio" id="customrounds" name="rounds" value="custom" onclick="getRounds()">
-                <label for="customrounds">custom</label><br>
-                <input type="number" id="customroundsnumber" name="rounds" onchange="getRounds()">
+                <div id="roundselection">
+                    <input type="radio" id="fourrounds" name="roundselection" value="4" onclick="getRounds()">
+                    <label for="fourrounds">4</label><br>
+                    <input type="radio" id="fiverounds" name="roundselection" value="5" onclick="getRounds()">
+                    <label for="fiverounds">5</label><br>
+                    <input type="radio" id="sixrounds" name="roundselection" value="6" onclick="getRounds()">
+                    <label for="sixrounds">6</label><br>
+                    <input type="radio" id="customrounds" name="roundselection" value="custom" onclick="getRounds()">
+                    <label for="customrounds">custom</label><br>
+                    <input type="number" id="customroundsnumber" name="roundselection" onchange="getRounds()">
+                </div>
+                <p id="showrounds"><span id="showroundsleft"></span> / <span id="showroundstotal"></span></p>
             </form>
         </div>
 
