@@ -24,7 +24,9 @@ main {
 
 input[type="number"] {
     background-color: white;
-    height: 2em;
+    font-size: 2em;
+    width: 30%;
+    text-align: center;
     color: black;
 }
 
@@ -33,4 +35,8 @@ input[type="number"] {
     width: 500px;
     margin: 2.5vh auto 10vh;
     padding: 20px;
+}
+
+a {
+    color: goldenrod;
 }

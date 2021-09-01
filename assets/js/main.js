@@ -26,33 +26,34 @@ function generateComputerChoice(){
 }
 
 function compare(userChoice, computerChoice){
-    if (userChoice < computerChoice) {
-        document.getElementById("output").innerHTML += `<p>You need to guess higher than ${userChoice}! Try again.</p>`
-    } else if (userChoice > computerChoice) {
-        document.getElementById("output").innerHTML += `<p>You need to guess lower than ${userChoice}! Try again.</p>`
-    } else if (userChoice == computerChoice) {
-        document.getElementById("output").innerHTML += `<p>You won!</p>`
+    if (userChoice < computerChoice && roundsleft < roundstotal ) {
+        document.getElementById("output").innerHTML += `<p>${roundsleft}- You need to guess higher than ${userChoice}! Try again...</p>`;
+    } else if (userChoice > computerChoice && roundsleft < roundstotal) {
+        document.getElementById("output").innerHTML += `<p>${roundsleft}- You need to guess lower than ${userChoice}! Try again...</p>`;
+    } else if (userChoice != computerChoice && roundsleft == roundstotal){
+        document.getElementById("output").innerHTML += `<p>Oh oh... You lost! <a href="/">Try again</a>.</p>`;
+        document.getElementById("submit").disabled = true;
+    } else if (userChoice == computerChoice && roundsleft <= roundstotal) {
+        document.getElementById("output").innerHTML += `<p>Yes!! You got me in ${roundsleft} guesses! I'm ${computerChoice}. You win!! <a href="/">Play again</a>.</p>`;
+        document.getElementById("submit").disabled = true;
     }
 }
 
 function rechnen(){
     document.getElementById("roundselection").style.display = "none";
-    roundsleft++;
-    console.log(roundsleft);
-    document.getElementById("showrounds").style.display = "block";
-    document.getElementById("showrounds").innerHTML = `${roundsleft} / ${roundstotal}`;
 
     userChoice = document.getElementById("guess").value;
-
-    if (roundsleft < 2) {
+    if (roundsleft < 1) {
         computerChoice = generateComputerChoice();
     }
-    
-    console.log("Userchoice: ", userChoice, "Computerchoice: ", computerChoice);
+    // console.log("Userchoice: ", userChoice, "Computerchoice: ", computerChoice);
 
-    compare(userChoice, computerChoice);
-}
+    if (roundsleft < roundstotal) {
+        roundsleft++;
+        // console.log(roundsleft);
+        document.getElementById("showrounds").style.display = "block";
+        document.getElementById("showrounds").innerHTML = `${roundsleft} / ${roundstotal}`;
 
-function restart(){
-    location.reload();
+        compare(userChoice, computerChoice);
+    }
 }
