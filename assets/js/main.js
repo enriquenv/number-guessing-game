@@ -31,10 +31,10 @@ function compare(userChoice, computerChoice){
     } else if (userChoice > computerChoice && roundsleft < roundstotal) {
         document.getElementById("output").innerHTML += `<p>${roundsleft}- You need to guess lower than ${userChoice}! Try again...</p>`;
     } else if (userChoice != computerChoice && roundsleft == roundstotal){
-        document.getElementById("output").innerHTML += `<p>Oh oh... You lost! <a href=".">Try again</a>.</p>`;
+        document.getElementById("output").innerHTML += `<p>Oh oh... You lost! <a href="">Try again</a>.</p>`;
         document.getElementById("submit").disabled = true;
     } else if (userChoice == computerChoice && roundsleft <= roundstotal) {
-        document.getElementById("output").innerHTML += `<p>Yes!! You got me in ${roundsleft} guesses! I'm ${computerChoice}. You win!! <a href=".">Play again</a>.</p>`;
+        document.getElementById("output").innerHTML += `<p>Yes!! You got me in ${roundsleft} guesses! I'm ${computerChoice}. You win!! <a href="">Play again</a>.</p>`;
         document.getElementById("submit").disabled = true;
     }
 }
